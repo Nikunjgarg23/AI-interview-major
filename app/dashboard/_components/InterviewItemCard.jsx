@@ -10,10 +10,13 @@ const InterviewItemCard = ({ interview }) => {
     const onFeedbackPress=()=>{
         router.push('dashboard/interview/'+interview.mockId+"/feedback")
     }
+    const handeldelete=()=>{
+      console.log("yhe");
+    }
   return (
     <div className="border shadow-sm rounded-sm p-3">
       <h2 className="font-bold text-primary">{interview?.jobPosition}</h2>
-      <h2 className="text-sm text-gray-500">{interview?.jobExperience}</h2>
+      <h2 className="text-sm text-gray-500">{interview?.jobExperience} Year Of Experience</h2>
       <h2 className="text-xs text-gray-400">
         Created At: {interview?.createdAt}
       </h2>
@@ -22,6 +25,7 @@ const InterviewItemCard = ({ interview }) => {
           Feedback
         </Button>
         <Button className="w-full" size="sm" onClick={onStart}>Start</Button>
+        <button className="btn btn-danger" onClick={handeldelete}>Delete</button>
       </div>
     </div>
   );

@@ -42,8 +42,13 @@ function AddNewInterview() {
     try {
       const result = await chatSession.sendMessage(inputPrompt);
       const responseText = await result.response.text();
-      console.log("🚀 ~ file: AddNewInterview.jsx:41 ~ onSubmit ~ responseText:", responseText)
-      const jsonMatch = responseText.match(/\[.*?\]/s);
+      console.log("🚀 ~ file: AddNewInterview.jsx:41 ~ onSubmit ~ responseText:", responseText);
+      const sanitizedResponseText = responseText.replace(/\\n|\\t|\\r/g, "").trim();
+      console.log("Sanitized response text:", sanitizedResponseText);
+
+      // Try to match and extract JSON array
+      const jsonMatch = sanitizedResponseText.match(/\[.*?\]/s);
+      // const jsonMatch = responseText.match(/\[.*?\]/s);
       if (!jsonMatch) {
         throw new Error("No valid JSON array found in the response");
       }
