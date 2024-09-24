@@ -28,7 +28,7 @@ export default function Page() {
             </a>
 
             <h2 className="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
-              Welcome to Interview Wallah 
+              Welcome to Interview Wallah
             </h2>
 
             <p className="mt-4 leading-relaxed text-white/90">
@@ -59,12 +59,11 @@ export default function Page() {
               </a>
 
               <h1 className="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
-                Welcome to AI Interview Moker 🦑
+                Welcome to Interview Wallah
               </h1>
 
               <p className="mt-4 leading-relaxed text-gray-500">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Eligendi nam dolorum aliquam, quibusdam aperiam voluptatum.
+                We’re grateful to have you on board.
               </p>
             </div>
             <SignIn />
