@@ -26,7 +26,6 @@ const Feedback = ({ params }) => {
       let totalScore = 0;
       feedbackList.forEach((item) => {
         totalScore += parseInt(item.rating);
-        // console.log(item.rating);
       });
       setScore(totalScore / feedbackList.length);
     }

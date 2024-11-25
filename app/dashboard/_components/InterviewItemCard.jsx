@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import React from "react";
-import { db } from "@/utils/db"; // Assuming db operations are allowed here
+import { db } from "@/utils/db";
 import { eq } from "drizzle-orm";
 import { MockInterview } from "@/utils/schema";
 const InterviewItemCard = ({ interview, refreshInterviewList }) => {
