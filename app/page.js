@@ -8,8 +8,7 @@ export default function Home() {
   const router = useRouter();
   useEffect(()=>{
     router.replace('/dashboard');
-    
-  },[]);
+  },[router]);
   return (
   <div className="text-center">
     <h1>Please Wait!!</h1>
